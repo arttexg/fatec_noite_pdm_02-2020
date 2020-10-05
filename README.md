@@ -1,3 +1,5 @@
-# fatec_noite_pdm_jogo_velha_ex01
-Branch Semana3 - PDM_Noite
-Agenda-Opacity
+# fatec_noite_pdm_app_agenda_ex06
+
+## Branch Semana6 - PDM_Noite App-Agenda
+
+Nesse exercicio fizemos a centralização de estado com redux e implementamos o acesso ao image-picker, possibilitando o uso de fotos na aplicaço agenda

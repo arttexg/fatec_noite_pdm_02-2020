@@ -4,6 +4,7 @@ import {
  TextInput,
  Button,
  StyleSheet,
+ TouchableOpacity,
  Text
 } from 'react-native';
 
@@ -11,7 +12,7 @@ const ContactInput = (props) => {
 
  const [name, setName] = useState('');
  const [phone, setPhone] = useState('');
- const [contacts, setContacts] = useState([{name:' ', phone:' '}]);
+ const [contacts, setContacts] = useState([{name:'', phone:''}]);
 
  const catchName = (name) => {
   setName(name);
@@ -42,10 +43,11 @@ const ContactInput = (props) => {
     onChangeText={catchPhone}
     value={phone}
    />
-   <Button 
-   title="ADD" 
-   onPress={() => props.onAddContact(contacts)}
-   />
+   <TouchableOpacity style={styles.customBtnBG} 
+    title="ADD" 
+    onPress={() => props.onAddContact(contacts)}>
+    <Text style={styles.customBtnText}>ADD</Text>
+   </TouchableOpacity>
   </View> 
  </View>
  );
@@ -70,7 +72,20 @@ agendaInputText: {
   borderBottomColor: 'black',
   borderBottomWidth: 1,
   padding: 2
-}
+},
+customBtnText: {
+  fontSize: 15,
+  fontWeight: '900',
+  color: "purple",
+  },
+  customBtnBG: {
+  backgroundColor: "black",
+  paddingHorizontal: 10,
+  paddingVertical: 7,
+  borderRadius: 8,
+  height: 35
+  }
+  
 });
 
 export default ContactInput;

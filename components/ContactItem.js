@@ -10,14 +10,14 @@ import {
 const ContactItem = (props) => {
  return (
   <TouchableOpacity onLongPress={() => props.onDelete(props.propsKey)}>
-   <View style={{flexDirection: 'row'}}>
-    <View style={styles.nameInList}>
-     <Text style={{color:'white'}}>{props.name}</Text>
+    <View style={{flexDirection: 'row'}}>
+      <View style={styles.nameInList}> 
+        <Text style={{color: 'purple'}}>{props.name}</Text>
+      </View>
+      <View style={styles.phoneInList}>
+        <Text style={{color: 'purple'}}>{props.phone}</Text>
+      </View>
     </View>
-    <View style={styles.phoneInList}>
-     <Text style={{color:'white'}}>{props.phone}</Text>
-    </View>
-   </View>
   </TouchableOpacity>
  );
 
@@ -26,7 +26,7 @@ const ContactItem = (props) => {
 const styles = StyleSheet.create({
  nameInList: {
   padding: 12,
-  backgroundColor: 'rgb(33, 150, 243)',
+  backgroundColor: 'black',
   borderColor: 'white',
   borderWidth: 1,
   marginBottom: 8,
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
 },
 phoneInList: {
   padding: 12,
-  backgroundColor: 'rgb(33, 150, 243)',
+  backgroundColor: 'black',
   borderColor: 'white',
   borderWidth: 1,
   marginBottom: 8,
@@ -45,6 +45,7 @@ phoneInList: {
   alignItems: 'center',
   width: 150,
   height: 40
+  
 }
 });
 
